@@ -17,7 +17,12 @@ class ProdutoFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'nome' => $this->faker->name(), 
+            'preco' => $this->faker->numberBetween($min = 1, $max = 1000),
+            'descricao' => $this->faker->text($maxNbChars = 100), 
+            'quantidade' => $this->faker->numberBetween($min = 0, $max = 100), 
+            'imagem' => $this->faker->imageUrl($width = 640, $height = 480), 
+            'categoria_id' => $this->faker->numberBetween($min = 1, $max = 10)
         ];
     }
 }
