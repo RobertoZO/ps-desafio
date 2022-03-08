@@ -33,7 +33,7 @@
                                         @foreach ($categorias as $categoria)
                                             <tr>
                                                 <td>{{ $categoria->id }}</td>
-                                                <td>{{ $categoria->nome }}</td>
+                                                <td>{{ $categoria->categoria }}</td>
                                                 <td>
                                                     <!-- botao editar -->
                                                     <a href="{{ route('categoria.edit', $categoria->id) }}">

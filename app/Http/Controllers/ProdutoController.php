@@ -74,7 +74,7 @@ class ProdutoController extends Controller
 
         if ($request->hasFile('imagem')){
             Storage::delete('public/' . $produto->imagem);
-            $datas['imagem'] = $request->fie('imagem')->store('produto', 'public');
+            $datas['imagem'] = $request->file('imagem')->store('produto', 'public');
         }
 
         $produto->update($datas);
@@ -91,4 +91,5 @@ class ProdutoController extends Controller
 
         return redirect('produto');
     }
+
 }

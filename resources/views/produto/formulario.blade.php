@@ -72,7 +72,7 @@
             @isset($categorias)
                 @foreach ($categorias as $categoria)
                     <option @if (isset($produto) && $produto->categoria_id == $categoria->id) selected @endif value="{{ $categoria->id }}">
-                        {{ $categoria->nome }}
+                        {{ $categoria->categoria }}
                     </option>
                 @endforeach
             @endisset

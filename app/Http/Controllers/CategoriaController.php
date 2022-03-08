@@ -32,9 +32,9 @@ class CategoriaController extends Controller
     public function store(Request $request)
     {
         $categoria = new Categoria();
-        $categoria->nome = $request->input('categoria');
+        $categoria->categoria = $request->input('categoria');
         $categoria->save();
-        
+
         return redirect(route('categoria.index'));
     }
 
@@ -48,7 +48,7 @@ class CategoriaController extends Controller
     public function update(Request $request, $id)
     {
         $categoria = $this->categorias->find($id);
-        $categoria->nome=$request->input('categoria');
+        $categoria->categoria=$request->input('categoria');
         $categoria->save();
 
         return redirect(route('categoria.index'));
